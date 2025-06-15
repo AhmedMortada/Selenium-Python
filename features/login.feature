@@ -1,6 +1,13 @@
-Feature: Login functionality
+Feature: Google Login
+    As a user
+    I want to access Google
+    So that I can use its services
 
-  Scenario: Successful login with valid credentials
-    Given the user is on the login page
-    When the user enters valid credentials
-    Then the user should be redirected to the dashboard
+    Scenario: Accept cookies and search on Google homepage
+        Given the user is on the login page
+        When the user accepts cookies
+        When the user searches for "Selenium WebDriver"
+        # Then the user able to search
+        
+        
+       

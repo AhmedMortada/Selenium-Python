@@ -1,4 +1,8 @@
-selenium
-pytest
-pytest-bdd
-python-dotenv
+selenium==4.32.0
+pytest==8.4.0
+pytest-bdd==8.1.0
+pytest-html==4.1.1
+webdriver-manager==4.0.2
+python-dotenv==1.1.0
+PyYAML==6.0.1
+loguru==0.7.2

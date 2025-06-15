@@ -1,0 +1,29 @@
+# Environment configurations
+environments:
+  dev:
+    base_url: "https://www.google.com"
+    browser: "chrome"
+    headless: false
+    implicit_wait: 10
+    explicit_wait: 10
+
+  test:
+    base_url: "https://www.google.com"
+    browser: "chrome"
+    headless: true
+    implicit_wait: 10
+    explicit_wait: 10
+
+# Test data
+test_data:
+  search_terms:
+    - "Selenium WebDriver"
+    - "Python Testing"
+    - "BDD Framework"
+
+# Reporting
+reporting:
+  html_report: true
+  report_path: "reports"
+  screenshot_path: "reports/screenshots"
+  log_path: "logs" 
