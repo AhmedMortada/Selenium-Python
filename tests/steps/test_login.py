@@ -15,23 +15,16 @@ scenarios('../../features/login.feature')
 def login_page(driver):
     return LoginPage(driver)
 
-@given("the user is on the login page")
-def user_on_login_page(driver):
-    logger.info("Navigating to Google homepage")
-    driver.get("https://www.google.com")
-    return LoginPage(driver)
+@given('the user is on the login page')
+def go_to_login_page(driver):
+    driver.get("https://www.google.com/")
+    # Wait for page to load
+    driver.implicitly_wait(5)
 
-@when("the user accepts cookies")
-def accept_cookies(login_page):
-    logger.info("Accepting cookies")
-    login_page.accept_cookies()
+@when('the user accepts cookies')
+def accept_cookies(driver, login_page):
+    assert login_page.accept_cookies(), "Failed to handle cookies"
 
-@when(parsers.parse('the user searches for "{search_term}"'))
-def search_term(login_page, search_term):
-    logger.info(f"Searching for: {search_term}")
-    login_page.search(search_term)
-
-# @then("the user able to search")
-# def verify_search(login_page):
-#     logger.info("Verifying search results")
-#     assert login_page.is_search_successful(), "Search was not successful" 
+@when(parsers.parse('the user searches for "{search_text}"'))
+def search_text(driver, login_page, search_text):
+    login_page.search(search_text)
