@@ -2,6 +2,44 @@
 
 A professional test automation framework using Selenium WebDriver, Pytest, and BDD.
 
+## Test Site Information
+
+The framework is designed to test the Demo Shop application, which is a sample e-commerce website with the following features:
+
+- User Registration
+- User Login
+- Product Browsing
+- Shopping Cart
+- Checkout Process
+
+### Test Site URL
+- Main URL: https://shop.demoqa.com/
+- Registration Page: https://shop.demoqa.com/my-account/
+- Login Page: https://shop.demoqa.com/my-account/
+
+### Test Site Features
+1. **User Management**
+   - Registration with email and password
+   - Login functionality
+   - User profile management
+
+2. **Product Features**
+   - Product listing
+   - Product categories
+   - Product search
+   - Product details view
+
+3. **Shopping Features**
+   - Add to cart
+   - Update cart
+   - Remove items
+   - Checkout process
+
+4. **Account Features**
+   - Order history
+   - Address management
+   - Account settings
+
 ## Project Structure
 ```
 selenium_pytest_bdd/
