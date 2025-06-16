@@ -26,3 +26,14 @@ def go_to_login_page(driver):
 def click_login_button(login_page):
     login_page.click_login()
 
+@when('the user enters the username')
+def enter_username(login_page):
+    login_page.enter_username("testuser@example.com")
+
+@when('the user enters the password')
+def enter_password(login_page):
+    login_page.enter_password("testpassword")
+
+@when('the user clicks the login button')
+def click_login_button(login_page):
+    login_page.click_login_button()
